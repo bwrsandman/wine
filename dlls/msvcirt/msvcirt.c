@@ -32,6 +32,10 @@ typedef struct {
 
 typedef struct {
     LPVOID VTable;
+} class_istrstream;
+
+typedef struct {
+    LPVOID VTable;
 } class_ostream;
 
 typedef struct {
@@ -68,6 +72,38 @@ void * __thiscall MSVCIRT_ios_sl_void(class_ios * _this)
 {
    FIXME("(%p) stub\n", _this);
    return _this;
+}
+
+/******************************************************************
+ *		 ??0istrstream@@QAE@PAD@Z (MSVCRTI.@)
+ *        class istream & __thiscall istrstream::istrstream(const char* str)
+ */
+DEFINE_THISCALL_WRAPPER(MSVCIRT_istrstream_ctor_pchar,8)
+class_istrstream * __thiscall MSVCIRT_istrstream_ctor_pchar(class_istrstream * _this, char* str, int size)
+{
+   FIXME("(%p)->(%p) stub\n", _this, str);
+   return _this;
+}
+
+/******************************************************************
+ *		 ??0istrstream@@QAE@PADH@Z (MSVCRTI.@)
+ *        class istream & __thiscall istrstream::istrstream(const char* str, int size)
+ */
+DEFINE_THISCALL_WRAPPER(MSVCIRT_istrstream_ctor_pchar_int,12)
+class_istrstream * __thiscall MSVCIRT_istrstream_ctor_pchar_int(class_istrstream * _this, char* str, int size)
+{
+   FIXME("(%p)->(%p, %d) stub\n", _this, str, size);
+   return _this;
+}
+
+/******************************************************************
+ *		 ??1istrstream@@UAE@XZ(ptr) (MSVCRTI.@)
+ *        class istream & __thiscall istrstream::~istrstream(void)
+ */
+DEFINE_THISCALL_WRAPPER(MSVCIRT_listrstream_dtor_void,4)
+void __thiscall MSVCIRT_listrstream_dtor_void(class_istrstream * _this)
+{
+   FIXME("(%p) stub\n", _this);
 }
 
 /******************************************************************

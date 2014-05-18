@@ -62,10 +62,10 @@
 @ stub -arch=win64 ??0istream_withassign@@QEAA@XZ
 @ stub -arch=win32 ??0istrstream@@QAE@ABV0@@Z  # __thiscall istrstream::istrstream(class istrstream const &)
 @ stub -arch=win64 ??0istrstream@@QEAA@AEBV0@@Z
-@ stub -arch=win32 ??0istrstream@@QAE@PAD@Z  # __thiscall istrstream::istrstream(char *)
-@ stub -arch=win64 ??0istrstream@@QEAA@PEAD@Z
-@ stub -arch=win32 ??0istrstream@@QAE@PADH@Z  # __thiscall istrstream::istrstream(char *,int)
-@ stub -arch=win64 ??0istrstream@@QEAA@PEADH@Z
+@ thiscall -arch=win32 ??0istrstream@@QAE@PAD@Z(ptr str) MSVCIRT_istrstream_ctor_pchar  # __thiscall istrstream::istrstream(const char *)
+@ cdecl -arch=win64 ??0istrstream@@QEAA@PEAD@Z(ptr str) MSVCIRT_istrstream_ctor_pchar
+@ thiscall -arch=win32 ??0istrstream@@QAE@PADH@Z(ptr str long) MSVCIRT_istrstream_ctor_pchar_int  # __thiscall istrstream::istrstream(char *,int)
+@ cdecl -arch=win64 ??0istrstream@@QEAA@PEADH@Z(ptr str long) MSVCIRT_istrstream_ctor_pchar_int
 @ stub -arch=win32 ??0logic_error@@QAE@ABQBD@Z  # __thiscall logic_error::logic_error(char const * const &)
 @ stub -arch=win64 ??0logic_error@@QEAA@AEBQEBD@Z
 @ stub -arch=win32 ??0logic_error@@QAE@ABV0@@Z  # __thiscall logic_error::logic_error(class logic_error const &)
@@ -148,7 +148,8 @@
 @ stub -arch=win64 ??1istream@@UEAA@XZ
 @ stub -arch=win32 ??1istream_withassign@@UAE@XZ  # virtual __thiscall istream_withassign::~istream_withassign(void)
 @ stub -arch=win64 ??1istream_withassign@@UEAA@XZ
-@ stub -arch=win32 ??1istrstream@@UAE@XZ  # virtual __thiscall istrstream::~istrstream(void)
+@ thiscall -arch=win32 ??1istrstream@@UAE@XZ(ptr) MSVCIRT_listrstream_dtor_void  # virtual __thiscall istrstream::~istrstream(void)
+@ cdecl -arch=win64 ??1istrstream@@UAE@XZ(ptr) MSVCIRT_listrstream_dtor_void
 @ stub -arch=win64 ??1istrstream@@UEAA@XZ
 @ stub -arch=win32 ??1logic_error@@UAE@XZ  # virtual __thiscall logic_error::~logic_error(void)
 @ stub -arch=win64 ??1logic_error@@UEAA@XZ
